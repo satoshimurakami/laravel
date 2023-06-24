@@ -40,7 +40,7 @@ class DFeController extends Controller
                 }
             }';
             echo 'Carregando arquivo certificado<br>';
-            $pfx = file_get_contents('/var/www/html/laravel/2023_2024_invictos.pfx');
+            $pfx = file_get_contents('/var/www/html/laravel/2023_2023_invictos.pfx');
             echo 'Arquivo certificado carregado<br>';
 
             //dd($pfx);
