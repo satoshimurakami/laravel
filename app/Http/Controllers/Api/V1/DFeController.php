@@ -39,18 +39,18 @@ class DFeController extends Controller
                     "proxyPass":""
                 }
             }';
-            //echo 'Carregando arquivo certificado<br>';
-            $pfx = file_get_contents('D:\Invictos\2023_2024_INVICTOS TECNOLOGIA LTDA11758339000178_EXPORTADO.pfx');
-            //echo 'Arquivo certificado carregado<br>';
+            echo 'Carregando arquivo certificado<br>';
+            $pfx = file_get_contents('/var/www/html/laravel/2023_2024_invictos.pfx');
+            echo 'Arquivo certificado carregado<br>';
 
             //dd($pfx);
             $password = 'Invi1234ctos';
 
-            //echo 'carregando certificado no componente NFePHP<br>';
+            echo 'carregando certificado no componente NFePHP<br>';
             
             $certificate = Certificate::readPfx($pfx, $password);
             
-            //echo 'certificado carregado no componente NFePHP<br>';
+            echo 'certificado carregado no componente NFePHP<br>';
             
             $tools = new Tools($configJson, $certificate);
             $tools->model('55');
